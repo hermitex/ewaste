@@ -1,0 +1,29 @@
+nav{
+    background-color: #000000;
+    width: 100%;
+    padding: 1rem;
+}
+.navbar-brand{
+    color: #FFFFFF;
+}
+.container-fluid{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-nav{
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar-nav li{
+  margin-right: 1rem;
+}
+
+.navbar-nav li a{
+    color: #FFFFFF;
+}
+
+.navbar-nav li:last-child{
+    margin-right: 0;
+}
