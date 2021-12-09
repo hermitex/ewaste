@@ -10,5 +10,7 @@
     <title><?php echo SITENAME; ?></title>
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/utility.css">
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/navigation.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/footer.css">
+
 </head>
 
