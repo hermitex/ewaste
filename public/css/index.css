@@ -47,10 +47,14 @@
     display: flex;
     justify-items: center;
     justify-content: space-evenly;
-    padding: 1.5rem;
+    /*padding: 1.5rem;*/
 }
 
-
+#service-header{
+    display: block;
+    text-align: center;
+    margin-top: 1rem;
+}
 
 .service-1{
     background: #11AA0E;
@@ -82,4 +86,8 @@
 
 svg{
     fill: #FFFFFF;
+}
+
+#map {
+    height: 585px;
 }

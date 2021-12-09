@@ -11,6 +11,10 @@
 
 <head>
     <link rel="stylesheet" href="css/index.css">
+    <script async
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ564vidn_VZ3kAYFS7X6aI_TmbgYb4_4&callback=initMap">
+    </script>
+
 </head>
 
 <div class="wrapper">
@@ -34,8 +38,11 @@
         </div>
     </div>
 </div>
-
+    <div id="service-header">
+        <h1>Our Services</h1>
+    </div>
     <div class="services">
+
         <div class="service service-1">
             <div class="icon">
                 <svg xmlns="http://www.w3.org/2000/svg" width="45" height="45" fill="currentColor" class="bi bi-truck" viewBox="0 0 16 16">
@@ -73,11 +80,15 @@
 
         </div>
     </div>
+    <div id="service-header">
+        <h1>Locate Us</h1>
     </div>
     <div class="map" id="map">
-        <h1>Find Us</h1>
+
     </div>
 </div>
+
+<script src="js/map.js"></script>
 
 
 <?php
