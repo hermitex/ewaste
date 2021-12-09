@@ -12,7 +12,7 @@
 <head>
     <link rel="stylesheet" href="css/index.css">
     <script async
-            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDZ564vidn_VZ3kAYFS7X6aI_TmbgYb4_4&callback=initMap">
+            src="https://maps.googleapis.com/maps/api/js?key=API-KEY&callback=initMap">
     </script>
 
 </head>
