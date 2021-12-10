@@ -16,4 +16,24 @@ class Pages extends Controller
     {
       $this->view('pages/about');
     }
+
+    public function drop()
+    {
+        $this->view('pages/drop');
+    }
+
+    public function pick()
+    {
+        $this->view('pages/pick');
+    }
+
+    public function location()
+    {
+        $this->view('pages/location');
+    }
+
+    public function contact()
+    {
+        $this->view('pages/contact');
+    }
 }

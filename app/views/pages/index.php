@@ -32,7 +32,7 @@ require_once APPROOT.'/views/includes/head.php';
                         </div>
                     </div>
                     <div class="right">
-                        <img src="img/recycler.jpg" alt="A man holding a recycle bin">
+                        <img src="<?php echo URLROOT; ?>/public/img/recycler.jpg" alt="A man holding a recycle bin">
                     </div>
                 </div>
             </div>
@@ -87,7 +87,7 @@ require_once APPROOT.'/views/includes/head.php';
         </div>
     </div>
 
-    <script src="js/map.js"></script>
+    <script src="<?php echo URLROOT; ?>/public/js/map.js"></script>
 
 
 <?php
