@@ -24,9 +24,15 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="<?php echo URLROOT; ?>/pages/contact">Contact Us</a>
                 </li>
+                <?php if (isset($_SESSION['user_id'])): ?>
+                <li class="nav-item">
+                    <a class="nav-link active button-green" href="<?php echo URLROOT; ?>/users/logout">Log Out</a>
+                </li>
+                <?php else: ?>
                 <li class="nav-item">
                     <a class="nav-link active button-green" href="<?php echo URLROOT; ?>/users/login">Login</a>
                 </li>
+                <?php endif; ?>
             </ul>
             <!--            Navigation links start here-->
         </div>
