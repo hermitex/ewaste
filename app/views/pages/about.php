@@ -11,7 +11,7 @@ require_once APPROOT.'/views/includes/head.php';
 </div>
 
 <head>
-    <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/about.css">
 </head>
 
 <div class="wrapper">
@@ -19,41 +19,35 @@ require_once APPROOT.'/views/includes/head.php';
         <div class="overlay">
             <div class="inner-div">
                 <div class="left">
-                    <h1 class="head-line">Stay Green, Leave Long</h1>
-                    <p class="head-para">Stay Green, Leave Long
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In, deserunt!
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In, deserunt!
-                    </p>
-                    <div>
-                        <a class="button-green"  href="<?php echo URLROOT; ?>/pages/pick">Request Pick Up</a>
-                        <a class="button-colorless" href="<?php echo URLROOT; ?>/pages/pick">Drop Off</a>
-                    </div>
-                </div>
-                <div class="right">
-                    <img src="img/recycler.jpg" alt="A man holding a recycle bin">
+                    <h1 class="head-line">We Love Earth</h1>
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="services">
-        <div class="service service-1">
-
-        </div>
-        <div class="service service-2">
-
-        </div>
-        <div class="service service-3">
-
-        </div>
+    <div class="about-line">
+        <h2><span class="span-left">About</span> <span class="span-mid" id="blurred-text" style="color: rgba(0, 0, 0, 0.82)">u</span> <span class="span-right">  Us<span class="span-right text-muted">ujj</span></span>  </h2>
     </div>
 
-    <div class="map" id="map">
 
+<div class="sbout-section">
+    <div class="about-overlay">
+        <div class="inner-div">
+            <div class="left" style="margin-right: 1.5rem;">
+                <img src="<?php echo URLROOT; ?>/public/img/driver.jpg" alt="A track driver smiling.">
+            </div>
+            <div class="right">
+                <h1 class="head-line">You are in the right place!</h1>
+                <p class="head-para">
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Assumenda, ex!Amet delectus iusto modi consequuntur nulla sequi. Delectus, dolorum sequi totam reiciendis dolore sit illum consectetur, voluptas recusandae repellat
+                    illo porro possimus animi veniam dolores modi ullam aperiam rem dicta  placeat itaque rerum accusantium enim aspernatur? Suscipit perspiciatistempora architecto.
+                </p>
+
+            </div>
+        </div>
     </div>
 </div>
-
-
+</div>
 <?php
 require_once APPROOT.'/views/includes/footer.php';
 ?>

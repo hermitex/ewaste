@@ -1,7 +1,39 @@
 <?php
-    require_once APPROOT.'/views/includes/head.php';
+    require APPROOT.'/views/includes/head.php';
 ?>
+<head>
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/login.css">
+</head>
 
+<main class="form-signin w-md-100">
+    <form action="<?php echo URLROOT; ?>/users/login" method="POST">
+        <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="eWaste Logo" width="72" height="57">
+        <small class="text-warning" style="display: block">Fields marked with * are required.</small>
+        <div class="form-floating">
+            <label for="email">Email address *</label>
+            <input type="email" class="form-control" id="email" placeholder="email" name="email">
+            <span class="bg bg-warning">
+                 <?php echo $data['emailError']; ?>
+            </span>
+        </div>
+        </div>
 
+        <div class="form-floating">
+            <label for="password">Password *</label>
+            <input type="password" class="form-control" id="password" placeholder="Password" name="password">
 
-<h1>Login Page</h1>
+            <span class="bg bg-warning">
+                <?php echo $data['passwordError']; ?>
+            </span>
+        </div>
+
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="w-100 btn btn-lg btn-primary button-green" type="submit">Sign in</button>
+        <p class="mt-3">Not registered yet?<a href="<?php echo URLROOT;?>/users/register" > Create an account!</a></p>
+        <p class="mt-5 mb-3 text-muted">&copy; <?php echo date('Y')?></p>
+    </form>
+</main>
