@@ -7,7 +7,9 @@
 
 <main class="form-signin w-md-100">
     <form action="<?php echo URLROOT; ?>/users/login" method="POST">
-        <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="eWaste Logo" width="72" height="57">
+        <a href="<?php echo URLROOT; ?>">
+            <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="eWaste Logo" width="72" height="57">
+        </a>
         <small class="text-warning" style="display: block">Fields marked with * are required.</small>
         <div class="form-floating">
             <label for="email">Email address *</label>

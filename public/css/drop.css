@@ -23,12 +23,12 @@
 }
 
 .locations{
-    height: 50vh;
-    display: flex;
-    justify-items: center;
-    justify-content: space-evenly;
-    /*padding: 1.5rem;*/
-    margin-bottom: 2rem;
+    /*height: 50vh;*/
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 1.5rem;
+    grid-gap: 1rem;
+
 }
 
 #location-header{
@@ -37,26 +37,11 @@
     margin-top: 1rem;
 }
 
-.location-1{
-    background: #11AA0E;
-    width: 25vw;
-}
 
-.location-2{
-    background: #CDD00D;
-    width: 25vw;
-}
-
-.location-3{
-    background: #2DBC55;
-    width: 25vw;
-}
 
 .location{
     height: 100%;
-    padding-top: 1.7rem;
-    padding-right: 1.5rem;
-    padding-left: 1.5rem;
+    padding: 1.7rem 1.5rem;
     line-height: 35px;
     background: rgba(20, 18, 18, 0.91);
 }
