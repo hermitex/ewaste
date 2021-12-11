@@ -39,20 +39,14 @@
     </div>
 
     <div class="col col-2">
-        <ul>
-            <li>
-                <a href="#">ADDRESS</a>
-            </li>
-            <li>
-                <a href="#">PO BOX 00100 - 6200,</a>
-            </li>
-            <li>
-                <a href="#">Nairobi,</a>
-            </li>
-            <li>
-                <a href="#">Phone: (079) - 716 - 741</a>
-            </li>
-        </ul>
+        <address>
+            ADDRESS <br>
+            Visit us at:<br>
+            eWaste Center<br>
+            PO BOX 00100 - 6200,<br>
+            NAIROBI.<br>
+            Phone: (079) - 716 - 741
+        </address>
     </div>
     </div>
     <div class="copy">

@@ -20,8 +20,8 @@ class User
         //Prepare statement
         $this->db->query("INSERT INTO users (first_name, last_name, email, password) VALUES(:first_name, :last_name, :email, :password)");
         //Bind values
-        $this->db->bind(':first_name', $data['first_name']);
-        $this->db->bind(':last_name', $data['last_name']);
+        $this->db->bind(':first_name', $data['firstName']);
+        $this->db->bind(':last_name', $data['lastName']);
         $this->db->bind(':email', $data['email']);
         $this->db->bind(':password', $data['password']);
         //execute query
