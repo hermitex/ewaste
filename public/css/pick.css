@@ -84,6 +84,9 @@
     grid-area: input-9;
 }
 
+.input-9 button{
+    width: 100%;
+}
 .input-7 label, .input-8 label{
     display: inline;
 }
@@ -95,11 +98,9 @@ input[type=checkbox]{
 .search-section form button{
     width: 7rem;
 }
-#map{
-    margin-top: 2rem;
-}
 
-.locations{
+
+.locations-wrapper{
     height: 50vh;
     display: flex;
     justify-items: center;
@@ -108,5 +109,8 @@ input[type=checkbox]{
     margin-bottom: 2rem;
 }
 
+.bg-warning{
+    background-color: goldenrod;
+}
 
 

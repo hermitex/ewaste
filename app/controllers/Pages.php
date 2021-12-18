@@ -36,4 +36,9 @@ class Pages extends Controller
     {
         $this->view('pages/contact');
     }
+
+    public function request()
+    {
+        $this->view('pages/index');
+    }
 }

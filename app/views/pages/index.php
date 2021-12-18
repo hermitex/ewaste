@@ -11,10 +11,14 @@ require_once APPROOT.'/views/includes/head.php';
     <head>
         <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/index.css">
         <script async
-                src="https://maps.googleapis.com/maps/api/js?key=<?php echo KEY; ?>&callback=initMap">
+                src="https://maps.googleapis.com/maps/api/js?key=<?php echo KEY; ?>&callback=init_map">
         </script>
 
     </head>
+
+<?php
+var_dump($data);
+?>
 
     <div class="wrapper">
         <div class="hero-section">
@@ -87,7 +91,7 @@ require_once APPROOT.'/views/includes/head.php';
         </div>
     </div>
 
-    <script src="<?php echo URLROOT; ?>/public/js/map.js"></script>
+<!--    <script src="--><?php //echo URLROOT; ?><!--/public/js/map.js"></script>-->
 
 
 <?php

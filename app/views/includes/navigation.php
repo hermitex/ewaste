@@ -16,7 +16,7 @@
                     <a class="nav-link active" href="<?php echo URLROOT; ?>/pages/pick">Pick Up</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="<?php echo URLROOT; ?>/pages/location">Locations</a>
+                    <a class="nav-link active" href="<?php echo URLROOT; ?>/locations/location">Locations</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="<?php echo URLROOT; ?>/pages/about">About Us</a>

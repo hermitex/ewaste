@@ -1,5 +1,8 @@
 <?php
 
+/**
+ * Users manages registration, login, logout
+ */
 class Users extends Controller
 {
     public function __construct(){
@@ -15,11 +18,15 @@ class Users extends Controller
         $this->view('users/index', $data);
     }
 
+    /**
+     * Registers a user
+     */
     public function register(){
         $data = [
             'firstName' => '',
             'lastName' => '',
             'email' => '',
+            'phone' => '',
             'password' => '',
             'passwordError' => '',
             'confirmPasswordError' => '',
@@ -34,6 +41,7 @@ class Users extends Controller
                 'firstName' => trim($_POST['firstName']),
                 'lastName' => trim($_POST['lastName']),
                 'email' => trim($_POST['email']),
+                'phone' => trim($_POST['phone']),
                 'password' => trim($_POST['password']),
                 'confirmPassword' => trim($_POST['confirmPassword']),
                 'passwordError' => '',
@@ -86,12 +94,17 @@ class Users extends Controller
                 //Empty the errors array
                 if(empty($data['firstNameError']) && empty($data['lastNameError']) && empty($data['emailError']) && empty($data['passwordError']) && empty($data['confirmPasswordError'])){
                     //Hash passwords
-                    $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
+//                    $data['password'] = password_hash($data['password'], PASSWORD_DEFAULT);
 
                     //Register user form model function
                     if ($this->userModel->register($data)){
-                        //Redirect the user to login page
-                        header('location: '.URLROOT.'/users/login');
+                        //Redirect the user to login page,
+                        if ($this->userModel->insertUserDetails($data)){
+                            header('location: '.URLROOT.'/users/login');
+                        }else{
+                            die("Something went wrong!");
+                        }
+
                     }else{
                         die(('Something went wrong!'));
                     }
@@ -102,6 +115,9 @@ class Users extends Controller
     }
 
 
+    /**
+     *  Logins in a user
+     */
     public function login()
     {
         $data = [
@@ -136,32 +152,31 @@ class Users extends Controller
             //Check if there are no errors
             if (empty($data['emailError']) && empty($data['passwordError'])){
                 $loggedInUser = $this->userModel->login($data['email'], $data['password']);
-                var_dump($loggedInUser);
-                if (!empty($loggedInUser)){
+                if ($loggedInUser){
                     $this->createUserSession($loggedInUser);
                 }else{
                     $data['passwordError'] = 'Password or email is incorrect. Please try again.';
                     $this->view('users/login', $data);
                 }
             }
-        }else{
-            $data = [
-                'email' => '',
-                'password' => '',
-                'emailError' => '',
-                'passwordError' => ''
-            ];
         }
         $this->view('users/login', $data);
     }
 
+    /**
+     * @param $user
+     * Creates a user session
+     */
     public function createUserSession($user) {
-        $_SESSION['user_id'] = $user->id;
+        $_SESSION['user_id'] = $user->userlogin_userlogin_id;
         $_SESSION['email'] = $user->email;
         $_SESSION['first_name'] = $user->first_name;
         header('location:' . URLROOT . '/users');
     }
 
+    /**
+     * Logs out a user and terminates a session
+     */
     public function logout() {
         unset($_SESSION['user_id']);
         unset($_SESSION['email']);
