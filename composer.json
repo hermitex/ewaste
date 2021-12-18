@@ -1,15 +1,14 @@
 {
-  "name": "$vendor_name$/$package_name$",
-  "description": "$description$",
-  "minimum-stability": "$stability$",
-  "license": "$license$",
+  "name": "vendor_name/ewaste",
+  "description": "description",
+  "minimum-stability": "stable",
+  "license": "proprietary",
   "authors": [
     {
-      "name": "$author$",
-      "email": "$email$"
+      "name": "hermitex",
+      "email": "email@example.com"
     }
   ],
   "require": {
-    $END$
   }
 }

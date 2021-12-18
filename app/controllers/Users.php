@@ -171,7 +171,7 @@ class Users extends Controller
         $_SESSION['user_id'] = $user->userlogin_userlogin_id;
         $_SESSION['email'] = $user->email;
         $_SESSION['first_name'] = $user->first_name;
-        header('location:' . URLROOT . '/users');
+        header('location:' . URLROOT . '/');
     }
 
     /**
