@@ -1,0 +1,116 @@
+.hero-section{
+    background-image: url("../img/bin.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: bottom;
+    height: 100vh;
+    overflow: hidden;
+}
+.search-section{
+    /*height: 100vh;*/
+    overflow: hidden;
+    /*display: grid;*/
+    /*align-items: center;*/
+    /*justify-items: center;*/
+    background: rgba(20, 18, 18, 0.91);
+    /*padding: 3rem;*/
+    color: #FFFFFF;
+}
+
+.search-section > .pick-form{
+    display: grid;
+    grid-template-areas:
+            "input-1 input-2"
+            "input-3 input-4"
+            "input-5 input-5"
+            "input-6 input-6"
+            "input-7 input-8"
+            "input-9 input-9";
+    grid-gap: 2rem;
+    padding: 1.5rem;
+}
+
+.pick-form textarea{
+    display: block;
+    width: 100%;
+}
+
+.pick-form label{
+    display: block;
+    /*text-align: center;*/
+    padding-bottom: 0.5rem;
+}
+
+.search-section form input{
+    padding: 1rem;
+    border-radius: 0.2rem;
+    width: 100%;
+
+}
+
+.input-1{
+    grid-area: input-1;
+}
+
+.input-2{
+    grid-area: input-2;
+}
+
+.input-3{
+    grid-area: input-3;
+}
+
+.input-4{
+    grid-area: input-4;
+}
+
+.input-5{
+    grid-area: input-5;
+}
+
+.input-6{
+    grid-area: input-6;
+}
+
+.input-7{
+    grid-area: input-7;
+}
+
+.input-8{
+    grid-area: input-8;
+}
+
+.input-9{
+    grid-area: input-9;
+}
+
+.input-9 button{
+    width: 100%;
+}
+.input-7 label, .input-8 label{
+    display: inline;
+}
+
+input[type=checkbox]{
+    display: inline;
+}
+
+.search-section form button{
+    width: 7rem;
+}
+
+
+.locations-wrapper{
+    height: 50vh;
+    display: flex;
+    justify-items: center;
+    justify-content: space-evenly;
+    /*padding: 1.5rem;*/
+    margin-bottom: 2rem;
+}
+
+.bg-warning{
+    background-color: goldenrod;
+}
+
+

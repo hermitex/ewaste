@@ -11,8 +11,8 @@ const DB_NAME = 'ewaste';
 
 //GOOGLE MAPS API KEY
 
-const KEY = '';
-
+const KEY = 'AIzaSyA069kbOW0YfP9UdWNG-4jD9VnBl95lVuM';
+//const KEY = 'AIzaSyA069kbOW0YfP9UdWNG-4jD9VnBl95lVu';
 //APPROOT
 define('APPROOT', dirname(dirname(__FILE__)));
 

@@ -7,7 +7,7 @@ require APPROOT.'/views/includes/head.php';
 
 <main class="form-signin w-md-100">
     <form action="<?php echo URLROOT; ?>/users/register" method="POST">
-        <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="Online daktari" width="72" height="57">
+        <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="eWaste logo" width="72" height="57">
         <small class="text-warning" style="display: block">Fields marked with * are required.</small>
 
         <div class="form-floating">
@@ -31,6 +31,14 @@ require APPROOT.'/views/includes/head.php';
             <input type="email" class="form-control" id="email" placeholder="name@example.com" name="email">
             <span class="bg bg-warning">
                  <?php echo $data['emailError']; ?>
+             </span>
+        </div>
+
+        <div class="form-floating">
+            <label for="tel">Phone*</label>
+            <input type="tel" class="form-control" id="tel" placeholder="0797165741" name="phone">
+            <span class="bg bg-warning">
+<!--                 --><?php //echo $data['emailError']; ?>
              </span>
         </div>
 

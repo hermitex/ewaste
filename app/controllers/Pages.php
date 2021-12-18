@@ -4,12 +4,16 @@ class Pages extends Controller
 {
     public function __construct()
     {
-
+        $this->locationModel = $this->model('Location');
     }
 
-    public function index()
-    {
-      $this->view('pages/index');
+
+    public function index(){
+        $locations = $this->locationModel->getLocations();
+        $data = [
+            'locations' => $locations
+        ];
+        $this->view('pages/index', $data);
     }
 
     public function about()
@@ -35,5 +39,10 @@ class Pages extends Controller
     public function contact()
     {
         $this->view('pages/contact');
+    }
+
+    public function request()
+    {
+        $this->view('pages/index');
     }
 }
