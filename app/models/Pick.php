@@ -25,4 +25,10 @@ class Pick
             return false;
         }
     }
+
+    public function getPickupLocations()
+    {
+        $this->db->query('SELECT * FROM location');
+        return $this->db->resultSet();
+    }
 }

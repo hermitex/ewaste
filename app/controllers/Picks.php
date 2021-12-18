@@ -7,9 +7,15 @@ class Picks extends Controller
         $this->pickupModel = $this->model('Pick');
     }
 
-    public function showPickupLocations()
+    public function pick()
     {
+       $locations = $this->pickupModel->getPickupLocations();
 
+       $data = [
+           'locations' => $locations
+       ];
+
+       $this->view('pages/pick', $data);
     }
 
     public function sendPickupRequest()

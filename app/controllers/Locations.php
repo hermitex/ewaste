@@ -11,7 +11,6 @@ class Locations extends Controller
     public function location(){
         $locations = $this->locationModel->getLocations();
         $data = [
-            'tittle' => 'Locations Page',
             'locations' => $locations
         ];
         $this->view('pages/location', $data);
@@ -92,9 +91,14 @@ class Locations extends Controller
         }
     }
 
-    public function displayLocation($id, $name, $lat, $long)
+    public function displayLocation()
     {
+        $locations = $this->locationModel->getLocations();
+        $data = [
+            'locations' => $locations
+        ];
 
+        $this->view('pages/index', $data);
     }
 
     public function removeLocation($id, $name, $lat, $long)

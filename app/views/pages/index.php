@@ -16,9 +16,6 @@ require_once APPROOT.'/views/includes/head.php';
 
     </head>
 
-<?php
-var_dump($data);
-?>
 
     <div class="wrapper">
         <div class="hero-section">
@@ -41,6 +38,8 @@ var_dump($data);
                 </div>
             </div>
         </div>
+
+
         <div id="service-header">
             <h1>Our Services</h1>
         </div>
@@ -91,7 +90,9 @@ var_dump($data);
         </div>
     </div>
 
-<!--    <script src="--><?php //echo URLROOT; ?><!--/public/js/map.js"></script>-->
+<?php
+require_once APPROOT.'/views/includes/locationsMap.php';
+?>
 
 
 <?php
