@@ -40,7 +40,7 @@
     }
 
     ?>
-    let locations = <?php echo json_encode(($geojson), JSON_PRETTY_PRINT); ?>;
+    let locations = <?php echo json_encode(($geojson)); ?>;
 
     console.log(locations);
 

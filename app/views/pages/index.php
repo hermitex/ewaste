@@ -9,7 +9,7 @@ require_once APPROOT.'/views/includes/head.php';
     </div>
 
     <head>
-        <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/index.css">   
+        <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/index.css">
     </head>
 
 
