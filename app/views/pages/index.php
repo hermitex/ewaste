@@ -9,11 +9,7 @@ require_once APPROOT.'/views/includes/head.php';
     </div>
 
     <head>
-        <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/index.css">
-        <script async
-                src="https://maps.googleapis.com/maps/api/js?key=<?php echo KEY; ?>&callback=init_map">
-        </script>
-
+        <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/index.css">   
     </head>
 
 
