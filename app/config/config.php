@@ -4,16 +4,15 @@
  *
  */
 //Database params
-const DB_HOST = 'us-cdbr-east-05.cleardb.net';
-const DB_USER = 'b30add903b29d2';
-const DB_PASS = '5e3bc9db';
-const DB_NAME = 'heroku_bd008af7b373fe4';
+const DB_HOST = 'localhost';
+const DB_USER = 'root';
+const DB_PASS = '';
+const DB_NAME = 'ewaste';
 
 //APPROOT
 define('APPROOT', dirname(dirname(__FILE__)));
 
-//URLROOT
-const URLROOT = 'https://ewastemasters.herokuapp.com';
+const URLROOT = 'http://localhost/ewaste';
 
 //SITENAMEs
 const SITENAME = 'eWastemasters';
