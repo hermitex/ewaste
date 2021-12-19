@@ -17,7 +17,7 @@ const KEY = 'AIzaSyA069kbOW0YfP9UdWNG-4jD9VnBl95lVuM';
 define('APPROOT', dirname(dirname(__FILE__)));
 
 //URLROOT
-const URLROOT = 'http://localhost/eWaste';
+const URLROOT = 'https://ewastemasters.herokuapp.com/ewaste';
 
 //SITENAME
 const SITENAME = 'eWaste';
