@@ -13,7 +13,7 @@ const DB_NAME = 'heroku_bd008af7b373fe4';
 define('APPROOT', dirname(dirname(__FILE__)));
 
 //URLROOT
-const URLROOT = 'https://ewastemasters.herokuapp.com/ewaste';
+const URLROOT = 'https://ewastemasters.herokuapp.com';
 
 //SITENAME
 const SITENAME = 'eWastemasters';
