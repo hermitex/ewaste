@@ -6,6 +6,12 @@
 </head>
 
 <main class="form-signin w-md-100">
+    <div style="background-color: #8f1c1c; padding: 0.5rem; color: #f5f5f5">
+        <?php
+        echo $data['message']
+        ?>
+    </div>
+
     <form action="<?php echo URLROOT; ?>/users/login" method="POST">
         <a href="<?php echo URLROOT; ?>">
             <img class="mb-4" src="/docs/5.0/assets/brand/bootstrap-logo.svg" alt="eWaste Logo" width="72" height="57">

@@ -20,7 +20,10 @@
 }
 #map{
     /*margin-top: 2rem;*/
+
+    /*position: fixed !important;*/
 }
+
 
 #locations-wrapper{
     height: 75vh;

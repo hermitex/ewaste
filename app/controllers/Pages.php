@@ -45,4 +45,9 @@ class Pages extends Controller
     {
         $this->view('pages/index');
     }
+
+    public function dashboard()
+    {
+        $this->view('pages/index');
+    }
 }

@@ -9,13 +9,14 @@ class Users extends Controller
         $this->userModel = $this->model('User');
     }
 
-    public function index(){
+    public function userlist()
+    {
         $users = $this->userModel->getUsers();
         $data = [
-            'tittle' => 'Users Home Page',
             'users' => $users
         ];
-        $this->view('users/index', $data);
+
+        $this->view('users/userlist', $data);
     }
 
     /**
@@ -32,7 +33,8 @@ class Users extends Controller
             'confirmPasswordError' => '',
             'firstNameError' => '',
             'lastNameError' => '',
-            'emailError' => ''
+            'emailError' => '',
+            'message' => ''
         ];
 
         if($_SERVER['REQUEST_METHOD'] == 'POST'){
@@ -48,7 +50,8 @@ class Users extends Controller
                 'confirmPasswordError' => '',
                 'firstNameError' => '',
                 'lastNameError' => '',
-                'emailError' => ''
+                'emailError' => '',
+                'message' => ''
             ];
 
             $nameValidation = "/^[a-zA-Z0-9]*$/";
@@ -125,7 +128,8 @@ class Users extends Controller
             'email' => '',
             'password' => '',
             'emailError' => '',
-            'passwordError' => ''
+            'passwordError' => '',
+            'message' => ''
         ];
 
         // Check for post
@@ -137,7 +141,8 @@ class Users extends Controller
                 'email' => trim($_POST['email']),
                 'password' => trim($_POST['password']),
                 'emailError' => '',
-                'passwordError' => ''
+                'passwordError' => '',
+                'message' => ''
             ];
 
             //Validate email
@@ -163,6 +168,7 @@ class Users extends Controller
         $this->view('users/login', $data);
     }
 
+
     /**
      * @param $user
      * Creates a user session
@@ -171,8 +177,10 @@ class Users extends Controller
         $_SESSION['user_id'] = $user->userlogin_userlogin_id;
         $_SESSION['email'] = $user->email;
         $_SESSION['first_name'] = $user->first_name;
-        header('location:' . URLROOT . '/users');
+        header('location:' . URLROOT . '/dashboards/dashboard');
     }
+
+
 
     /**
      * Logs out a user and terminates a session
