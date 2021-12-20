@@ -19,14 +19,12 @@
     width: 7rem;
 }
 #map{
-    /*margin-top: 2rem;*/
-
-    /*position: fixed !important;*/
+    height: 25rem !important;
 }
 
 
 #locations-wrapper{
-    height: 75vh;
+    height: 80vh;
     display: grid;
     grid-template-columns: auto;
     padding: 1.5rem;
@@ -62,11 +60,24 @@
 #wrapper{
     display: grid;
     grid-template-columns: 1fr 2fr;
-    height: 30rem;
+    height: 80vh;
     overflow: hidden;
 }
 
 .mapboxgl-canvas{
-    height: 75vh !important;
+    /*height: 80vh !important;*/
     /*display: none;*/
+}
+
+.marker{
+    background-image: url('../markers/mapbox-marker-icon-green.svg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 1.5rem;
+    height: 1.9rem;
+    border-radius: 50%;
+    cursor: pointer;
+    padding: 0;
+    margin: 0;
 }

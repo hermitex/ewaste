@@ -8,14 +8,19 @@ require_once APPROOT.'/views/includes/head.php';
         ?>
     </div>
 
-    <head>
+
         <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/index.css">
         <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/drop.css">
-        <script async
-                src="https://maps.googleapis.com/maps/api/js?key=<?php echo KEY; ?>&callback=initMap">
-        </script>
 
-    </head>
+<style>
+    .locations{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        column-gap: 1rem;
+        row-gap: 1rem;
+        padding:1rem;
+    }
+</style>
 
     <div class="wrapper">
         <div class="hero-section">
@@ -26,18 +31,19 @@ require_once APPROOT.'/views/includes/head.php';
                         <p class="head-para">
                             Find the nearest place to your location to drop of your electronic waste today!
                         </p>
+                        <a href="#location-sec" class="button-green">View Drop off Sites</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="search-section">
+        <div class="search-section" id="location-sec">
             <form action="" method="">
                 <div class="form-floating">
                     <label for="city">Name of City</label>
                     <input type="text" class="form-control" id="city" placeholder="Nairobi" name="city">
                     <span class="bg bg-warning">
-<!--                 --><?php //echo $data['firstNameError']; ?>
+<?php //echo $data['firstNameError']; ?>
              </span>
                 </div>
 
@@ -169,7 +175,10 @@ require_once APPROOT.'/views/includes/head.php';
 
     </div>
 
-    <script src="<?php echo URLROOT; ?>/public/js/map.js"></script>
+<?php
+require_once APPROOT.'/views/includes/locationsMap.php';
+?>
+
 
 
 <?php

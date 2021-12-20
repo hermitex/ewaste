@@ -1,17 +1,17 @@
 <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.js'></script>
 <link href='https://api.tiles.mapbox.com/mapbox-gl-js/v2.6.1/mapbox-gl.css' rel='stylesheet' />
+<link rel="stylesheet" href="<?php echo URLROOT; ?>/public/css/drop.css">
 <script type="text/javascript">
     mapboxgl.accessToken = 'pk.eyJ1IjoiaGVybWl0ZXgiLCJhIjoiY2twOWxlM2pkMGY2aTJwbGw3Y3NkYTMzbiJ9.FU8pM1-GhV3KyA1IkbY32A';
 
     const map = new mapboxgl.Map({
         container: 'map',
-        style: 'mapbox://styles/mapbox/light-v10',
+        style: 'mapbox://styles/mapbox/dark-v10',
         center: [36.81667, -1.28333],
         zoom: 5,
         scrollZoom: false
     });
-    var ewasteLocationsOb = {};
-    var ewasteLocationsArr = [];
+
 
     <?php
 
@@ -44,7 +44,19 @@
     ?>
     let locations = <?php echo json_encode(($geojson), JSON_PRETTY_PRINT); ?>;
 
-<?php
+
+    // add markers to map
+    for (const feature of locations.features) {
+        // create a HTML element for each feature
+        const el = document.createElement('div');
+        el.className = 'marker';
+
+        // make a marker for each feature and add to the map
+        new mapboxgl.Marker(el).setLngLat(feature.geometry.coordinates).addTo(map);
+    }
+
+
+    <?php
 $lR = array();
 foreach ($data['locations'] as $location){
     $arr = array(
@@ -69,9 +81,9 @@ foreach ($data['locations'] as $location){
          */
         map.addLayer({
             id: 'location',
-            type: 'circle',
+            // type: 'circle',
             /*
-            Add a GeoJSON source containng place coordinates and info
+            Add a GeoJSON source containing place coordinates and info
              */
             source: {
                 type: 'geojson',

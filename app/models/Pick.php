@@ -2,7 +2,7 @@
 
 class Pick
 {
-    private $db;
+    private Database $db;
 
     function __construct(){
         $this->db = new Database;

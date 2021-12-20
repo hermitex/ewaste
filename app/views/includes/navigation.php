@@ -10,10 +10,10 @@
             <!--            Navigation links start here-->
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" href="<?php echo URLROOT; ?>/pages/drop">Drop Off</a>
+                    <a class="nav-link active" href="<?php echo URLROOT; ?>/drops/drop">Drop Off</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="<?php echo URLROOT; ?>/pages/pick">Pick Up</a>
+                    <a class="nav-link active" href="<?php echo URLROOT; ?>/picks/pick">Pick Up</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link active" href="<?php echo URLROOT; ?>/locations/location">Locations</a>

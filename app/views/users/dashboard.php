@@ -121,7 +121,7 @@
             <div class="box">
                 <div class="right-side">
                     <div class="box-topic">Total Locations</div>
-                    <div class="number">$12,876</div>
+                    <div class="number">2,000</div>
                     <div class="indicator">
                         <i class='bx bx-up-arrow-alt'></i>
                         <span class="text">Updated <?php echo date('D, Y, H')?></span>
@@ -174,27 +174,27 @@
                     </ul>
                     <ul class="details">
                         <li class="topic">Status</li>
-                        <li><a href="#">Delivered</a></li>
+                        <li><a href="#">Complete</a></li>
                         <li><a href="#">Pending</a></li>
-                        <li><a href="#">Returned</a></li>
-                        <li><a href="#">Delivered</a></li>
+                        <li><a href="#">Processing</a></li>
+                        <li><a href="#">Complete</a></li>
                         <li><a href="#">Pending</a></li>
-                        <li><a href="#">Returned</a></li>
-                        <li><a href="#">Delivered</a></li>
+                        <li><a href="#">Processing</a></li>
+                        <li><a href="#">Complete</a></li>
                         <li><a href="#">Pending</a></li>
-                        <li><a href="#">Delivered</a></li>
+                        <li><a href="#">Complete</a></li>
                     </ul>
                     <ul class="details">
                         <li class="topic">Type</li>
-                        <li><a href="#">$204.98</a></li>
-                        <li><a href="#">$24.55</a></li>
-                        <li><a href="#">$25.88</a></li>
-                        <li><a href="#">$170.66</a></li>
-                        <li><a href="#">$56.56</a></li>
-                        <li><a href="#">$44.95</a></li>
-                        <li><a href="#">$67.33</a></li>
-                        <li><a href="#">$23.53</a></li>
-                        <li><a href="#">$46.52</a></li>
+                        <li><a href="#">Pick</a></li>
+                        <li><a href="#">Drop</a></li>
+                        <li><a href="#">Drop</a></li>
+                        <li><a href="#">Bin Swap</a></li>
+                        <li><a href="#">Pick</a></li>
+                        <li><a href="#">Pick</a></li>
+                        <li><a href="#">Drop</a></li>
+                        <li><a href="#">Pick</a></li>
+                        <li><a href="#">Drop</a></li>
                     </ul>
                 </div>
                 <div class="button">
@@ -207,57 +207,23 @@
                     <li>
                         <a href="#">
                             <!--<img src="images/sunglasses.jpg" alt="">-->
-                            <span class="product">Vuitton Sunglasses</span>
+                            <span class="product">Pick</span>
                         </a>
-                        <span class="price">$1107</span>
+                        <span class="price">Ksh.10,107</span>
                     </li>
                     <li>
                         <a href="#">
                             <!--<img src="images/jeans.jpg" alt="">-->
-                            <span class="product">Hourglass Jeans </span>
+                            <span class="product">Drop</span>
                         </a>
-                        <span class="price">$1567</span>
+                        <span class="price">Ksh.15,067</span>
                     </li>
                     <li>
                         <a href="#">
                             <!-- <img src="images/nike.jpg" alt="">-->
-                            <span class="product">Nike Sport Shoe</span>
+                            <span class="product">Recycle</span>
                         </a>
-                        <span class="price">$1234</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <!--<img src="images/scarves.jpg" alt="">-->
-                            <span class="product">Hermes Silk Scarves.</span>
-                        </a>
-                        <span class="price">$2312</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <!--<img src="images/blueBag.jpg" alt="">-->
-                            <span class="product">Succi Ladies Bag</span>
-                        </a>
-                        <span class="price">$1456</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <!--<img src="images/bag.jpg" alt="">-->
-                            <span class="product">Gucci Womens's Bags</span>
-                        </a>
-                        <span class="price">$2345</span>
-                    <li>
-                        <a href="#">
-                            <!--<img src="images/addidas.jpg" alt="">-->
-                            <span class="product">Addidas Running Shoe</span>
-                        </a>
-                        <span class="price">$2345</span>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <!--<img src="images/shirt.jpg" alt="">-->
-                            <span class="product">Bilack Wear's Shirt</span>
-                        </a>
-                        <span class="price">$1245</span>
+                        <span class="price">Ksh.12,034</span>
                     </li>
                 </ul>
             </div>
