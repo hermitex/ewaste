@@ -44,11 +44,10 @@
     ?>
     let locations = <?php echo json_encode(($geojson), JSON_PRETTY_PRINT); ?>;
 
-
     // add markers to map
     for (const feature of locations.features) {
         // create a HTML element for each feature
-        const el = document.createElement('div');
+        const el = document.createElement('span');
         el.className = 'marker';
 
         // make a marker for each feature and add to the map
