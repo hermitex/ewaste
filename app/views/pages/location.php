@@ -20,12 +20,14 @@ require_once APPROOT.'/views/includes/navigation.php';
                     <p class="head-para">
                         Find the nearest place to your location to drop of your electronic waste today!
                     </p>
+                    <a href="#search-section" class="button-green">View Our Locations</a>
+
                 </div>
             </div>
         </div>
     </div>
 
-    <div class="search-section">
+    <div class="search-section" id="search-section">
         <form action="" method="get">
             <div class="form-floating">
                 <label for="city">Name of City</label>

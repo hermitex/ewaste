@@ -175,8 +175,10 @@ class Users extends Controller
      */
     public function createUserSession($user) {
         $_SESSION['user_id'] = $user->userlogin_userlogin_id;
-        $_SESSION['email'] = $user->email;
+        $_SESSION['email'] = $user->username;
         $_SESSION['first_name'] = $user->first_name;
+        $_SESSION['last_name'] = $user->last_name;
+        $_SESSION['phone'] = $user->phone;
         header('location:' . URLROOT . '/dashboards/dashboard');
     }
 
@@ -186,9 +188,7 @@ class Users extends Controller
      * Logs out a user and terminates a session
      */
     public function logout() {
-        unset($_SESSION['user_id']);
-        unset($_SESSION['email']);
-        unset($_SESSION['first_name']);
+        session_destroy();
         header('location:' . URLROOT . '/users/login');
     }
 }

@@ -64,7 +64,7 @@ class User
     }
 
     /**
-     * @param $email
+     * @param $username
      * @param $password
      * @return false
      */
@@ -84,7 +84,7 @@ class User
 
             if ($password == $hashedPassword) {
                 echo "pass correct!";
-                $this->db->query('SELECT * FROM users WHERE userlogin_userlogin_id = :userlogin_userlogin_id');
+                $this->db->query('SELECT * FROM users INNER JOIN userlogin u on u.userlogin_id = users.userlogin_userlogin_id WHERE userlogin_userlogin_id = :userlogin_userlogin_id');
 
                 //Bind value
                 $this->db->bind(':userlogin_userlogin_id', $row->userlogin_id);

@@ -38,7 +38,7 @@
                 )
             )
         );
-        array_push($geojson['features'], $marker);
+        $geojson['features'][] = $marker;
     }
 
     ?>
@@ -68,7 +68,7 @@ foreach ($data['locations'] as $location){
         'pitch' => 40,
         'id' => $location->location_id
     );
-    array_push($lR, $arr);
+    $lR[] = $arr;
  }
 ?>
     let lR = <?php echo json_encode(($lR), JSON_PRETTY_PRINT); ?>;
@@ -116,7 +116,7 @@ foreach ($data['locations'] as $location){
                     </address>
                  </div>
                <div class="info">
-                    <p class="distance">15.7 KM</p>
+                    <p class="distance">15.7 KM</p>h
                     <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Direction</a>
                     <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Edit</a>
                     <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Remove</a>

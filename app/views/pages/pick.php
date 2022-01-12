@@ -10,10 +10,8 @@ require_once APPROOT.'/views/includes/head.php';
 
 <head>
     <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/index.css">
-    <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/pick.css">
-<!--    <script async-->
-<!--            src="https://maps.googleapis.com/maps/api/js?key=--><?php //echo KEY; ?><!--&callback=init_map">-->
-<!--    </script>-->
+    <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/pick.css"
+
 
 </head>
 
@@ -23,12 +21,15 @@ require_once APPROOT.'/views/includes/head.php';
             <div class="inner-div">
                 <div class="left">
                     <h1 class="head-line">Let Us Recycle Today!</h1>
+                    <a href="#search-section" class="button-green">View Our Locations</a>
                 </div>
+
+
             </div>
         </div>
     </div>
 
-    <div class="search-section">
+    <div class="search-section" id="search-section">
         <?php
         require_once APPROOT.'/views/includes/gmap.php';
         ?>

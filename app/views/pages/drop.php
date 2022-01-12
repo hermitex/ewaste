@@ -13,13 +13,19 @@ require_once APPROOT.'/views/includes/head.php';
         <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/drop.css">
 
 <style>
-    .locations{
+    #locations-wrapper{
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(3, 1fr) !important;
         column-gap: 1rem;
         row-gap: 1rem;
         padding:1rem;
+        overflow: hidden !important;
+        height: auto !important;
+        overflow-y: paged-y-controls !important;
+        /*margin-top: 1.5rem;*/
+        /*margin-bottom: 1.5rem;*/
     }
+
 </style>
 
     <div class="wrapper">
@@ -67,109 +73,9 @@ require_once APPROOT.'/views/includes/head.php';
         <div id="location-header">
             <h1>Locations</h1>
         </div>
-        <div class="locations">
 
-            <div class="location location-1">
-                <div class="text">
-                    <address>
-                        eWaste Center<br>
-                        PO BOX 00100 - 6200,<br>
-                        NAIROBI.<br>
-                        Phone: (079) - 716 - 741
-                    </address>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
-            <div class="location location-2">
-                <div class="text">
-                    <div class="text">
-                        <address>
-                            eWaste Center<br>
-                            PO BOX 00100 - 6200,<br>
-                            NAIROBI.<br>
-                            Phone: (079) - 716 - 741
-                        </address>
-                    </div>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
-            <div class="location location-3">
-                <div class="text">
-                    <address>
-                        eWaste Center<br>
-                        PO BOX 00100 - 6200,<br>
-                        NAIROBI.<br>
-                        Phone: (079) - 716 - 741
-                    </address>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
+        <div  id="locations-wrapper">
 
-            <div class="location location-3">
-                <div class="text">
-                    <address>
-                        eWaste Center<br>
-                        PO BOX 00100 - 6200,<br>
-                        NAIROBI.<br>
-                        Phone: (079) - 716 - 741
-                    </address>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
-            <div class="location location-3">
-                <div class="text">
-                    <address>
-                        eWaste Center<br>
-                        PO BOX 00100 - 6200,<br>
-                        NAIROBI.<br>
-                        Phone: (079) - 716 - 741
-                    </address>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
-            <div class="location location-3">
-                <div class="text">
-                    <address>
-                        eWaste Center<br>
-                        PO BOX 00100 - 6200,<br>
-                        NAIROBI.<br>
-                        Phone: (079) - 716 - 741
-                    </address>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
-            <div class="location location-3">
-                <div class="text">
-                    <address>
-                        eWaste Center<br>
-                        PO BOX 00100 - 6200,<br>
-                        NAIROBI.<br>
-                        Phone: (079) - 716 - 741
-                    </address>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
 
         </div>
 
