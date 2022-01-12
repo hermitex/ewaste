@@ -1,6 +1,6 @@
 <?php
 
-class Drops extends Locations
+class Drops extends Controller
 {
 
     public function __construct(){
@@ -8,12 +8,13 @@ class Drops extends Locations
     }
 
     public function drop(){
-        $locations = $this->drooffModel->getDropoofLocations();
+        $locations = $this->drooffModel->getLocations();
         $data = [
             'locations' => $locations
         ];
-        $this->view('users/drop', $data);
+        $this->view('pages/drop', $data);
     }
+
 
     public function showDropoffLocations()
     {

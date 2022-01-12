@@ -35,19 +35,19 @@ class Picks extends Controller
         ];
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST'){
+            var_dump($_POST);
             $_POST = filter_input_array(INPUT_POST, FILTER_SANITIZE_STRING);
             $data = [
                 'name' => trim($_POST['name']),
-                'residency' => trim($_POST['residency']),
                 'email' => trim($_POST['email']),
                 'phone' => trim($_POST['phone']),
-                'address' => trim($_POST['address']),
+                'longitude' => trim($_POST['long']),
+                'latitude' => trim($_POST['lat']),
                 'comment' => trim($_POST['message']),
                 'nameError' => '',
                 'residencyError' => '',
                 'emailError' => '',
-                'phoneError' => '',
-                'addressError' => ''
+                'phoneError' => ''
             ];
 
             $nameValidation = "/^[a-zA-Z0-9]*$/";

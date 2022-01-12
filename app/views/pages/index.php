@@ -12,7 +12,10 @@ require_once APPROOT.'/views/includes/head.php';
         <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/index.css">
     </head>
 
+<?php
 
+//var_dump($_SESSION);
+?>
     <div class="wrapper">
         <div class="hero-section">
             <div class="overlay">

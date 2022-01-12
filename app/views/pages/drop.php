@@ -8,11 +8,25 @@ require_once APPROOT.'/views/includes/head.php';
         ?>
     </div>
 
-    <head>
+
         <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/index.css">
         <link rel="stylesheet" href="<?php echo URLROOT; ?>/css/drop.css">
 
-    </head>
+<style>
+    #locations-wrapper{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr) !important;
+        column-gap: 1rem;
+        row-gap: 1rem;
+        padding:1rem;
+        overflow: hidden !important;
+        height: auto !important;
+        overflow-y: paged-y-controls !important;
+        /*margin-top: 1.5rem;*/
+        /*margin-bottom: 1.5rem;*/
+    }
+
+</style>
 
     <div class="wrapper">
         <div class="hero-section">
@@ -23,18 +37,19 @@ require_once APPROOT.'/views/includes/head.php';
                         <p class="head-para">
                             Find the nearest place to your location to drop of your electronic waste today!
                         </p>
+                        <a href="#location-sec" class="button-green">View Drop off Sites</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="search-section">
+        <div class="search-section" id="location-sec">
             <form action="" method="">
                 <div class="form-floating">
                     <label for="city">Name of City</label>
                     <input type="text" class="form-control" id="city" placeholder="Nairobi" name="city">
                     <span class="bg bg-warning">
-<!--                 --><?php //echo $data['firstNameError']; ?>
+<?php //echo $data['firstNameError']; ?>
              </span>
                 </div>
 
@@ -58,115 +73,18 @@ require_once APPROOT.'/views/includes/head.php';
         <div id="location-header">
             <h1>Locations</h1>
         </div>
-        <div class="locations">
 
-            <div class="location location-1">
-                <div class="text">
-                    <address>
-                        eWaste Center<br>
-                        PO BOX 00100 - 6200,<br>
-                        NAIROBI.<br>
-                        Phone: (079) - 716 - 741
-                    </address>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
-            <div class="location location-2">
-                <div class="text">
-                    <div class="text">
-                        <address>
-                            eWaste Center<br>
-                            PO BOX 00100 - 6200,<br>
-                            NAIROBI.<br>
-                            Phone: (079) - 716 - 741
-                        </address>
-                    </div>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
-            <div class="location location-3">
-                <div class="text">
-                    <address>
-                        eWaste Center<br>
-                        PO BOX 00100 - 6200,<br>
-                        NAIROBI.<br>
-                        Phone: (079) - 716 - 741
-                    </address>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
+        <div  id="locations-wrapper">
 
-            <div class="location location-3">
-                <div class="text">
-                    <address>
-                        eWaste Center<br>
-                        PO BOX 00100 - 6200,<br>
-                        NAIROBI.<br>
-                        Phone: (079) - 716 - 741
-                    </address>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
-            <div class="location location-3">
-                <div class="text">
-                    <address>
-                        eWaste Center<br>
-                        PO BOX 00100 - 6200,<br>
-                        NAIROBI.<br>
-                        Phone: (079) - 716 - 741
-                    </address>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
-            <div class="location location-3">
-                <div class="text">
-                    <address>
-                        eWaste Center<br>
-                        PO BOX 00100 - 6200,<br>
-                        NAIROBI.<br>
-                        Phone: (079) - 716 - 741
-                    </address>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
-            <div class="location location-3">
-                <div class="text">
-                    <address>
-                        eWaste Center<br>
-                        PO BOX 00100 - 6200,<br>
-                        NAIROBI.<br>
-                        Phone: (079) - 716 - 741
-                    </address>
-                </div>
-                <div class="info">
-                    <p class="distance">15.7 KM</p>
-                    <a class="button-green" href="<?php echo URLROOT; ?>/pages/direction">Directions</a>
-                </div>
-            </div>
 
         </div>
 
     </div>
 
-    <script src="<?php echo URLROOT; ?>/public/js/map.js"></script>
+<?php
+require_once APPROOT.'/views/includes/locationsMap.php';
+?>
+
 
 
 <?php
