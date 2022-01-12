@@ -21,8 +21,9 @@
                 <li class="nav-item">
                     <a class="nav-link active" href="<?php echo URLROOT; ?>/pages/about">About Us</a>
                 </li>
+
                 <li class="nav-item">
-                    <a class="nav-link active" href="<?php echo URLROOT; ?>/pages/contact">Contact Us</a>
+                    <a class="nav-link active" href="<?php echo URLROOT; ?>/dashboards/dashboard">Dashboard</a>
                 </li>
                 <?php if (isset($_SESSION['user_id'])): ?>
                 <li class="nav-item">

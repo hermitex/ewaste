@@ -78,23 +78,22 @@ class User
         $row = $this->db->single();
 
 
-//        var_dump($row);
+        if($this->db->rowCount()>0){
 
-        var_dump($row->password);
+            $hashedPassword = $row->password;
 
+            if ($password == $hashedPassword) {
+                echo "pass correct!";
+                $this->db->query('SELECT * FROM users WHERE userlogin_userlogin_id = :userlogin_userlogin_id');
 
-        $hashedPassword = $row->password;
+                //Bind value
+                $this->db->bind(':userlogin_userlogin_id', $row->userlogin_id);
 
-        if ($password == $hashedPassword) {
-            echo "pass correct!";
-            $this->db->query('SELECT * FROM users WHERE userlogin_userlogin_id = :userlogin_userlogin_id');
-
-            //Bind value
-            $this->db->bind(':userlogin_userlogin_id', $row->userlogin_id);
-
-            return $this->db->single();
-        } else {
-            echo "pass wrong!";
+                return $this->db->single();
+            } else {
+                return false;
+            }
+        }else{
             return false;
         }
     }
